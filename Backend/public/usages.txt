@@ -1,0 +1,5 @@
+ res.cookie('jwt', token, { 
+                    httpOnly: true, 
+                    secure: false, // Use HTTPS in production
+                    sameSite: 'strict' // For enhanced security
+                    });

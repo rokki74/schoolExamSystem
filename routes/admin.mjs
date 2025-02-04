@@ -1,10 +1,11 @@
 import express from 'express';
-import {addAdminController, getAdminController } from '../controllers/admin.mjs';
+import {addAdminController, getAdminController, loginAdminController } from '../controllers/admin.mjs';
 
 const router = express.Router();
 
-//Route to post to classes
-router.post('/', addAdminController);
+//Route to post to admin
+router.post('/register', addAdminController);
 router.get('/', getAdminController);
+router.post('/login', loginAdminController);
 
 export default router;
